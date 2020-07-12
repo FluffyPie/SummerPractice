@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SummerPractice
@@ -15,10 +8,7 @@ namespace SummerPractice
         public MainForm()
         {
             InitializeComponent();
-            AnalyseInformation();
-            ValueADatagrid.EnableHeadersVisualStyles = false;
-
-
+            TableOfValuesDatagrid.EnableHeadersVisualStyles = false;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -30,76 +20,147 @@ namespace SummerPractice
         {
             Application.Exit();
         }
-        private void AnalyseInformation()
+
+        private void DrawAGraph()
         {
-            double y, y1;
-            ValueADatagrid.RowHeadersVisible = false;
- 
-            //chart1.Series[0].Points.Clear();
-            //chart1.Series[1].Points.Clear();
-            //chart1.Series[2].Points.Clear();
-            //radioButton1.Checked = true;
-           
-            int columm = 0;
-            int row = 0;
-            int check = 0;
-            ValueADatagrid.RowCount = 21;
-            ValueADatagrid.ColumnCount = 2;
-            //ValueBDatagrid.RowCount = 22;
-            //ValueBDatagrid.ColumnCount = 2;
-            // ValueBDatagrid.Rows[0].Cells[0].Value = "x";
-            // ValueBDatagrid.Rows[0].Cells[1].Value = "f(x)";
-            //ValueCDatagrid.RowCount = 22;
-            // ValueCDatagrid.ColumnCount = 2;
-            //  ValueCDatagrid.Rows[0].Cells[0].Value = "x";
-            // ValueCDatagrid.Rows[0].Cells[1].Value = "f(x)";
-            //chart1.Series[1].Points.AddXY(0, 0);
-            for (double i = 0; i < 2.1; i += 2.0 / 20)
+
+            Random Rand = new Random();
+            double Innacurate = 0;
+            GraphOfValues.Series[0].Points.Clear();
+            GraphOfValues.Series[1].Points.Clear();
+            GraphOfValues.Series[2].Points.Clear();
+            GraphOfValues.Series[3].Points.Clear();
+            GraphOfValues.Series[4].Points.Clear();
+            GraphOfValues.Series[5].Points.Clear();
+            double yA, yB = 0;
+            int SkipFirst = 0;
+            TableOfValuesDatagrid.RowCount = 21;
+            TableOfValuesDatagrid.ColumnCount = 2;
+            GraphOfValues.Series[1].Points.AddXY(0, 0);
+            for (double i = 0; i < Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
             {
-                check++;
-                y = 100 * Math.Pow(Math.E, i * (-5));
-                //chart1.Series[0].Points.AddXY(Math.Round(i, 2), Math.Round(y, 2));
-                if (check > 1) { 
-                    y1 = (100 - y) * Math.Pow(Math.E, i * (-3));
-                //chart1.Series[1].Points.AddXY(Math.Round(i, 2), Math.Round(y1, 2));
+                Innacurate = Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value)*-1, Convert.ToInt32(MaximalInaccuracy.Value));
+                SkipFirst++;
+                yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) *(Convert.ToDouble(ReactSpeedKOne.Value)));
+                GraphOfValues.Series[0].Points.AddXY(i, yA);
+                GraphOfValues.Series[3].Points.AddXY(i, yA+Innacurate);
+                if (SkipFirst > 1)
+                {
+                    yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * (Convert.ToDouble(ReactSpeedKTwo.Value)));
+                    GraphOfValues.Series[1].Points.AddXY(i, yB);
+                    GraphOfValues.Series[4].Points.AddXY(i, yB + Innacurate);
                 }
 
-                //chart1.Series[2].Points.AddXY(Math.Round(i, 2), 100 - y - y1);
-               
-                if (columm == 0)
+                GraphOfValues.Series[2].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB);
+                GraphOfValues.Series[5].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB + Innacurate);
+            }
+        }
+        
+        private void DrawConcATable() {
+            try
+            {
+                double yA;
+                TableOfValuesDatagrid.RowHeadersVisible = false;
+                int CurrentRow = 0;
+                TableOfValuesDatagrid.RowCount = Convert.ToInt32(TimeForReaction.Value * 10);
+                TableOfValuesDatagrid.ColumnCount = 2;
+                for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
                 {
-                    ValueADatagrid.Rows[row].Cells[columm].Value = Math.Round(i, 2);
-                    columm++;
-                }
-                if (columm == 1)
-                {
-                    ValueADatagrid.Rows[row].Cells[columm].Value = Math.Round(y, 2);
-                    columm--;
-                }
-                if (columm == 0)
-                {
-                   // ValueBDatagrid.Rows[row].Cells[columm].Value = Math.Round(i, 2);
-                    columm++;
-                }
-                if (columm == 1)
-                {
-                   // ValueBDatagrid.Rows[row].Cells[columm].Value = Math.Round(y1, 2);
-                    columm--;
-                }
-                if (columm == 0)
-                {
-                   // ValueCDatagrid.Rows[row].Cells[columm].Value = Math.Round(i, 2);
-                    columm++;
-                }
-                if (columm == 1)
-                {
-                    //ValueCDatagrid.Rows[row].Cells[columm].Value = Math.Round(100 - y - y1, 2);
-                    columm--;
-                }
-                row++;
-                ValueADatagrid.Columns[0].HeaderText = "Value of x";
-                ValueADatagrid.Columns[1].HeaderText = "Value of f(x)";
+                    yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKOne.Value));
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yA, 2);
+                    CurrentRow++;
+                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
 
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+        private void DrawConcBTable()
+        {
+            try
+            {
+                double yA, yB = 0;
+                TableOfValuesDatagrid.RowHeadersVisible = false;
+                int CurrentRow = 0;
+                int SkipFirst = 0;
+                TableOfValuesDatagrid.RowCount = Convert.ToInt32(TimeForReaction.Value * 10); ;
+                TableOfValuesDatagrid.ColumnCount = 2;
+                for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
+                {
+                    SkipFirst++;
+                    yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKOne.Value));
+                    if (SkipFirst > 1)
+                    {
+                        yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));
+                    }
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yB, 2);
+                    CurrentRow++;
+                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        private void DrawConcCTable()
+        {
+            try
+            {
+                double yA, yB = 0;
+                TableOfValuesDatagrid.RowHeadersVisible = false;
+                int CurrentRow = 0;
+                int SkipFirst = 0;
+                TableOfValuesDatagrid.RowCount = Convert.ToInt32(TimeForReaction.Value * 10); ;
+                TableOfValuesDatagrid.ColumnCount = 2;
+                for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
+                {
+                    SkipFirst++;
+                    yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKOne.Value));
+                    if (SkipFirst > 1)
+                    {
+                        yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));
+                    }
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
+                    TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(Convert.ToDouble(ConcentrationOfA.Value)-yB-yA, 2);
+                    CurrentRow++;
+                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+
+        private void AnalyticButton_Click(object sender, EventArgs e)
+        {
+            DrawAGraph();
+            if (ConcentrationAButton.Checked == true)
+            {
+                TableOfValuesDatagrid.Rows.Clear();
+                DrawConcATable();
+            }
+            if (ConcentrationBButton.Checked == true)
+            {
+                TableOfValuesDatagrid.Rows.Clear();
+                DrawConcBTable();
+            }
+            if (ConcentrationCButton.Checked == true)
+            {
+                TableOfValuesDatagrid.Rows.Clear();
+                DrawConcCTable();
             }
         }
     }
