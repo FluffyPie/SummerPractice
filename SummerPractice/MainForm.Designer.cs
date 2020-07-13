@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainFormEllipse = new Guna.UI.WinForms.GunaElipse(this.components);
             this.MainWindowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
@@ -80,10 +80,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GraphOfValues = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GraphGroupbox = new System.Windows.Forms.GroupBox();
             this.AnalyticButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.GraphInFullscreenButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.CloseFSButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.MainFormMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValuesDatagrid)).BeginInit();
             this.ValueGroupBox.SuspendLayout();
@@ -97,7 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GraphOfValues)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.GraphGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormEllipse
@@ -177,45 +178,45 @@
             // 
             // TableOfValuesDatagrid
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.NullValue = null;
-            this.TableOfValuesDatagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.NullValue = null;
+            this.TableOfValuesDatagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.TableOfValuesDatagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.TableOfValuesDatagrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TableOfValuesDatagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TableOfValuesDatagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.TableOfValuesDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TableOfValuesDatagrid.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TableOfValuesDatagrid.DefaultCellStyle = dataGridViewCellStyle33;
             this.TableOfValuesDatagrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.TableOfValuesDatagrid.Location = new System.Drawing.Point(6, 19);
             this.TableOfValuesDatagrid.Name = "TableOfValuesDatagrid";
             this.TableOfValuesDatagrid.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TableOfValuesDatagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TableOfValuesDatagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.TableOfValuesDatagrid.RowHeadersVisible = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            this.TableOfValuesDatagrid.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
+            this.TableOfValuesDatagrid.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.TableOfValuesDatagrid.ShowEditingIcon = false;
             this.TableOfValuesDatagrid.Size = new System.Drawing.Size(229, 384);
             this.TableOfValuesDatagrid.TabIndex = 3;
@@ -334,10 +335,10 @@
             this.TimeForReaction.Size = new System.Drawing.Size(57, 20);
             this.TimeForReaction.TabIndex = 23;
             this.TimeForReaction.Value = new decimal(new int[] {
-            1,
+            3,
             0,
             0,
-            65536});
+            0});
             // 
             // label15
             // 
@@ -364,6 +365,11 @@
             this.RequieredInnac.Name = "RequieredInnac";
             this.RequieredInnac.Size = new System.Drawing.Size(57, 20);
             this.RequieredInnac.TabIndex = 20;
+            this.RequieredInnac.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             // 
             // label14
             // 
@@ -381,6 +387,11 @@
             this.MaximalInaccuracy.Name = "MaximalInaccuracy";
             this.MaximalInaccuracy.Size = new System.Drawing.Size(56, 20);
             this.MaximalInaccuracy.TabIndex = 18;
+            this.MaximalInaccuracy.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // label12
             // 
@@ -442,6 +453,11 @@
             this.ConcentrationOfA.Name = "ConcentrationOfA";
             this.ConcentrationOfA.Size = new System.Drawing.Size(57, 20);
             this.ConcentrationOfA.TabIndex = 10;
+            this.ConcentrationOfA.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // label9
             // 
@@ -459,6 +475,11 @@
             this.ReactSpeedKTwo.Name = "ReactSpeedKTwo";
             this.ReactSpeedKTwo.Size = new System.Drawing.Size(57, 20);
             this.ReactSpeedKTwo.TabIndex = 8;
+            this.ReactSpeedKTwo.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // label8
             // 
@@ -476,6 +497,11 @@
             this.ReactSpeedKOne.Name = "ReactSpeedKOne";
             this.ReactSpeedKOne.Size = new System.Drawing.Size(57, 20);
             this.ReactSpeedKOne.TabIndex = 6;
+            this.ReactSpeedKOne.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // label7
             // 
@@ -534,69 +560,70 @@
             // GraphOfValues
             // 
             this.GraphOfValues.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.Name = "ChartArea1";
-            this.GraphOfValues.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.HeaderSeparatorColor = System.Drawing.Color.White;
-            legend3.ItemColumnSeparatorColor = System.Drawing.Color.White;
-            legend3.Name = "Legend1";
-            this.GraphOfValues.Legends.Add(legend3);
+            chartArea7.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea7.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea7.AxisY2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.Name = "ChartArea1";
+            this.GraphOfValues.ChartAreas.Add(chartArea7);
+            legend7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            legend7.ForeColor = System.Drawing.Color.White;
+            legend7.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend7.ItemColumnSeparatorColor = System.Drawing.Color.White;
+            legend7.Name = "Legend1";
+            this.GraphOfValues.Legends.Add(legend7);
             this.GraphOfValues.Location = new System.Drawing.Point(8, 25);
             this.GraphOfValues.Name = "GraphOfValues";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.LabelBackColor = System.Drawing.Color.White;
-            series13.Legend = "Legend1";
-            series13.Name = "Conc. A";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series14.Legend = "Legend1";
-            series14.Name = "Conc. B";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series15.Legend = "Legend1";
-            series15.Name = "Conc. C";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series16.Legend = "Legend1";
-            series16.Name = "Inacc. A";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series17.Legend = "Legend1";
-            series17.Name = "Inacc. B";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series18.Legend = "Legend1";
-            series18.Name = "Inacc. C";
-            this.GraphOfValues.Series.Add(series13);
-            this.GraphOfValues.Series.Add(series14);
-            this.GraphOfValues.Series.Add(series15);
-            this.GraphOfValues.Series.Add(series16);
-            this.GraphOfValues.Series.Add(series17);
-            this.GraphOfValues.Series.Add(series18);
+            series37.ChartArea = "ChartArea1";
+            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series37.LabelBackColor = System.Drawing.Color.White;
+            series37.Legend = "Legend1";
+            series37.Name = "Conc. A";
+            series38.ChartArea = "ChartArea1";
+            series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series38.Legend = "Legend1";
+            series38.Name = "Conc. B";
+            series39.ChartArea = "ChartArea1";
+            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series39.Legend = "Legend1";
+            series39.Name = "Conc. C";
+            series40.ChartArea = "ChartArea1";
+            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series40.Legend = "Legend1";
+            series40.Name = "Inacc. A";
+            series41.ChartArea = "ChartArea1";
+            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series41.Legend = "Legend1";
+            series41.Name = "Inacc. B";
+            series42.ChartArea = "ChartArea1";
+            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series42.Legend = "Legend1";
+            series42.Name = "Inacc. C";
+            this.GraphOfValues.Series.Add(series37);
+            this.GraphOfValues.Series.Add(series38);
+            this.GraphOfValues.Series.Add(series39);
+            this.GraphOfValues.Series.Add(series40);
+            this.GraphOfValues.Series.Add(series41);
+            this.GraphOfValues.Series.Add(series42);
             this.GraphOfValues.Size = new System.Drawing.Size(340, 216);
             this.GraphOfValues.TabIndex = 6;
             this.GraphOfValues.Text = "Graph";
             // 
-            // groupBox2
+            // GraphGroupbox
             // 
-            this.groupBox2.Controls.Add(this.GraphOfValues);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(466, 28);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(354, 253);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Graph";
+            this.GraphGroupbox.Controls.Add(this.CloseFSButton);
+            this.GraphGroupbox.Controls.Add(this.GraphOfValues);
+            this.GraphGroupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GraphGroupbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GraphGroupbox.Location = new System.Drawing.Point(466, 28);
+            this.GraphGroupbox.Name = "GraphGroupbox";
+            this.GraphGroupbox.Size = new System.Drawing.Size(354, 255);
+            this.GraphGroupbox.TabIndex = 5;
+            this.GraphGroupbox.TabStop = false;
+            this.GraphGroupbox.Text = "Graph";
             // 
             // AnalyticButton
             // 
@@ -616,7 +643,7 @@
             this.AnalyticButton.Image = null;
             this.AnalyticButton.ImageSize = new System.Drawing.Size(20, 20);
             this.AnalyticButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.AnalyticButton.Location = new System.Drawing.Point(474, 351);
+            this.AnalyticButton.Location = new System.Drawing.Point(474, 341);
             this.AnalyticButton.Name = "AnalyticButton";
             this.AnalyticButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.AnalyticButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -624,41 +651,44 @@
             this.AnalyticButton.OnHoverImage = null;
             this.AnalyticButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.AnalyticButton.OnPressedColor = System.Drawing.Color.Black;
-            this.AnalyticButton.Size = new System.Drawing.Size(346, 47);
+            this.AnalyticButton.Size = new System.Drawing.Size(346, 50);
             this.AnalyticButton.TabIndex = 6;
             this.AnalyticButton.Text = "Analytic Method";
             this.AnalyticButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AnalyticButton.Click += new System.EventHandler(this.AnalyticButton_Click);
             // 
-            // gunaAdvenceButton2
+            // GraphInFullscreenButton
             // 
-            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton2.CheckedImage")));
-            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton2.Image")));
-            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.Location = new System.Drawing.Point(474, 298);
-            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
-            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.OnHoverImage = null;
-            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.Size = new System.Drawing.Size(346, 45);
-            this.gunaAdvenceButton2.TabIndex = 7;
-            this.gunaAdvenceButton2.Text = "gunaAdvenceButton2";
+            this.GraphInFullscreenButton.AnimationHoverSpeed = 0.07F;
+            this.GraphInFullscreenButton.AnimationSpeed = 0.03F;
+            this.GraphInFullscreenButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(70)))));
+            this.GraphInFullscreenButton.BorderColor = System.Drawing.Color.Black;
+            this.GraphInFullscreenButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.GraphInFullscreenButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.GraphInFullscreenButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.GraphInFullscreenButton.CheckedForeColor = System.Drawing.Color.White;
+            this.GraphInFullscreenButton.CheckedImage = null;
+            this.GraphInFullscreenButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.GraphInFullscreenButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.GraphInFullscreenButton.FocusedColor = System.Drawing.Color.Empty;
+            this.GraphInFullscreenButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GraphInFullscreenButton.ForeColor = System.Drawing.Color.White;
+            this.GraphInFullscreenButton.Image = null;
+            this.GraphInFullscreenButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.GraphInFullscreenButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.GraphInFullscreenButton.Location = new System.Drawing.Point(474, 298);
+            this.GraphInFullscreenButton.Name = "GraphInFullscreenButton";
+            this.GraphInFullscreenButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.GraphInFullscreenButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.GraphInFullscreenButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.GraphInFullscreenButton.OnHoverImage = null;
+            this.GraphInFullscreenButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.GraphInFullscreenButton.OnPressedColor = System.Drawing.Color.Black;
+            this.GraphInFullscreenButton.Size = new System.Drawing.Size(346, 37);
+            this.GraphInFullscreenButton.TabIndex = 7;
+            this.GraphInFullscreenButton.Text = "Open Graph in Fullscreen";
+            this.GraphInFullscreenButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GraphInFullscreenButton.Click += new System.EventHandler(this.GraphInFullscreenButton_Click);
             // 
             // gunaAdvenceButton3
             // 
@@ -678,7 +708,7 @@
             this.gunaAdvenceButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton3.Image")));
             this.gunaAdvenceButton3.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton3.Location = new System.Drawing.Point(474, 406);
+            this.gunaAdvenceButton3.Location = new System.Drawing.Point(474, 397);
             this.gunaAdvenceButton3.Name = "gunaAdvenceButton3";
             this.gunaAdvenceButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaAdvenceButton3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -686,9 +716,42 @@
             this.gunaAdvenceButton3.OnHoverImage = null;
             this.gunaAdvenceButton3.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton3.Size = new System.Drawing.Size(346, 40);
+            this.gunaAdvenceButton3.Size = new System.Drawing.Size(346, 52);
             this.gunaAdvenceButton3.TabIndex = 8;
             this.gunaAdvenceButton3.Text = "gunaAdvenceButton3";
+            // 
+            // CloseFSButton
+            // 
+            this.CloseFSButton.AnimationHoverSpeed = 0.07F;
+            this.CloseFSButton.AnimationSpeed = 0.03F;
+            this.CloseFSButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CloseFSButton.BorderColor = System.Drawing.Color.Black;
+            this.CloseFSButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.CloseFSButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.CloseFSButton.CheckedForeColor = System.Drawing.Color.White;
+            this.CloseFSButton.CheckedImage = null;
+            this.CloseFSButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.CloseFSButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.CloseFSButton.FocusedColor = System.Drawing.Color.Empty;
+            this.CloseFSButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CloseFSButton.ForeColor = System.Drawing.Color.White;
+            this.CloseFSButton.Image = null;
+            this.CloseFSButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.CloseFSButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CloseFSButton.Location = new System.Drawing.Point(684, 353);
+            this.CloseFSButton.Name = "CloseFSButton";
+            this.CloseFSButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CloseFSButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.CloseFSButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.CloseFSButton.OnHoverImage = null;
+            this.CloseFSButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CloseFSButton.OnPressedColor = System.Drawing.Color.Black;
+            this.CloseFSButton.Size = new System.Drawing.Size(115, 50);
+            this.CloseFSButton.TabIndex = 7;
+            this.CloseFSButton.Text = "Close";
+            this.CloseFSButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CloseFSButton.Visible = false;
+            this.CloseFSButton.Click += new System.EventHandler(this.CloseFSButton_Click);
             // 
             // MainForm
             // 
@@ -696,10 +759,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(832, 461);
+            this.Controls.Add(this.GraphGroupbox);
             this.Controls.Add(this.gunaAdvenceButton3);
-            this.Controls.Add(this.gunaAdvenceButton2);
+            this.Controls.Add(this.GraphInFullscreenButton);
             this.Controls.Add(this.AnalyticButton);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TablesGroupbox);
             this.Controls.Add(this.ValueGroupBox);
@@ -728,7 +791,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GraphOfValues)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.GraphGroupbox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -755,9 +818,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox GraphGroupbox;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton3;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
+        private Guna.UI.WinForms.GunaAdvenceButton GraphInFullscreenButton;
         private Guna.UI.WinForms.GunaAdvenceButton AnalyticButton;
         private System.Windows.Forms.NumericUpDown TimeForReaction;
         private System.Windows.Forms.Label label15;
@@ -777,6 +840,7 @@
         private System.Windows.Forms.NumericUpDown ReactSpeedKOne;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private Guna.UI.WinForms.GunaAdvenceButton CloseFSButton;
     }
 }
 

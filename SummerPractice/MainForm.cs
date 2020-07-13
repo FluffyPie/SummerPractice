@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SummerPractice
 {
@@ -23,7 +25,6 @@ namespace SummerPractice
 
         private void DrawAGraph()
         {
-
             Random Rand = new Random();
             double Innacurate = 0;
             GraphOfValues.Series[0].Points.Clear();
@@ -162,6 +163,26 @@ namespace SummerPractice
                 TableOfValuesDatagrid.Rows.Clear();
                 DrawConcCTable();
             }
+        }
+
+        private void GraphInFullscreenButton_Click(object sender, EventArgs e)
+        {
+           GraphGroupbox.Location = new Point(4,28);
+           GraphGroupbox.Width = 820; 
+           GraphGroupbox.Height = 421;
+           GraphOfValues.Width = 791;
+           GraphOfValues.Height = 390;
+           CloseFSButton.Visible = true;
+        }
+
+        private void CloseFSButton_Click(object sender, EventArgs e)
+        {
+            GraphGroupbox.Location = new Point(464, 28);
+            GraphGroupbox.Width = 354;
+            GraphGroupbox.Height = 253;
+            GraphOfValues.Width = 340;
+            GraphOfValues.Height = 216;
+            CloseFSButton.Visible = false;
         }
     }
 }
