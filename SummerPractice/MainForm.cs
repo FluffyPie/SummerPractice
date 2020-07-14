@@ -182,7 +182,7 @@ namespace SummerPractice
             GraphGroupbox.Height = 253;
             GraphOfValues.Width = 340;
             GraphOfValues.Height = 216;
-            CloseFSButton.Visible = false;
+            CloseFSButton.Visible = false;//
         }
     }
 }
