@@ -167,7 +167,7 @@ namespace SummerPractice
 
         private void GraphInFullscreenButton_Click(object sender, EventArgs e)
         {
-           GraphGroupbox.Location = new Point(4,28);
+           GraphGroupbox.Location = new Point(4     ,28);
            GraphGroupbox.Width = 820; 
            GraphGroupbox.Height = 421;
            GraphOfValues.Width = 791;
