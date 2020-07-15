@@ -40,9 +40,9 @@ namespace SummerPractice
             GraphOfValues.Series[1].Points.AddXY(0, 0);
             for (double i = 0; i < Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
             {
-                Innacurate = Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value)*-1, Convert.ToInt32(MaximalInaccuracy.Value));
                 SkipFirst++;
                 yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) *(Convert.ToDouble(ReactSpeedKOne.Value)));
+                Innacurate = (yA/100)*Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value)-Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                 GraphOfValues.Series[0].Points.AddXY(i, yA);
                 GraphOfValues.Series[3].Points.AddXY(i, yA+Innacurate);
                 if (SkipFirst > 1)
@@ -167,7 +167,7 @@ namespace SummerPractice
 
         private void GraphInFullscreenButton_Click(object sender, EventArgs e)
         {
-           GraphGroupbox.Location = new Point(4     ,28);
+           GraphGroupbox.Location = new Point(4, 28);
            GraphGroupbox.Width = 820; 
            GraphGroupbox.Height = 421;
            GraphOfValues.Width = 791;
@@ -183,6 +183,24 @@ namespace SummerPractice
             GraphOfValues.Width = 340;
             GraphOfValues.Height = 216;
             CloseFSButton.Visible = false;//
+        }
+
+        private void ValueACheckedChanged(object sender, EventArgs e)
+        {
+            if (ConcentrationAButton.Checked == true)
+                DrawConcATable();
+        }
+
+        private void ValueBCheckedChanged(object sender, EventArgs e)
+        {
+            if (ConcentrationBButton.Checked == true)
+                DrawConcBTable();
+        }
+
+        private void ValueCCheckedChanged(object sender, EventArgs e)
+        {
+            if (ConcentrationCButton.Checked == true)
+                DrawConcCTable();
         }
     }
 }
