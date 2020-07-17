@@ -34,24 +34,19 @@ namespace SummerPractice
             GraphOfValues.Series[4].Points.Clear();
             GraphOfValues.Series[5].Points.Clear();
             double yA, yB = 0;
-            int SkipFirst = 0;
             TableOfValuesDatagrid.RowCount = 21;
             TableOfValuesDatagrid.ColumnCount = 2;
             GraphOfValues.Series[1].Points.AddXY(0, 0);
             for (double i = 0; i < Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
             {
-                SkipFirst++;
+                
                 yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) *(Convert.ToDouble(ReactSpeedKOne.Value)));
                 Innacurate = (yA/100)*Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value)-Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                 GraphOfValues.Series[0].Points.AddXY(i, yA);
                 GraphOfValues.Series[3].Points.AddXY(i, yA+Innacurate);
-                if (SkipFirst > 1)
-                {
-                    yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * (Convert.ToDouble(ReactSpeedKTwo.Value)));
-                    GraphOfValues.Series[1].Points.AddXY(i, yB);
-                    GraphOfValues.Series[4].Points.AddXY(i, yB + Innacurate);
-                }
-
+                yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * (Convert.ToDouble(ReactSpeedKTwo.Value)));
+                GraphOfValues.Series[1].Points.AddXY(i, yB);
+                GraphOfValues.Series[4].Points.AddXY(i, yB + Innacurate);
                 GraphOfValues.Series[2].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB);
                 GraphOfValues.Series[5].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB + Innacurate);
             }
@@ -71,10 +66,12 @@ namespace SummerPractice
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yA, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
+                   
+                   
 
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -88,24 +85,19 @@ namespace SummerPractice
                 double yA, yB = 0;
                 TableOfValuesDatagrid.RowHeadersVisible = false;
                 int CurrentRow = 0;
-                int SkipFirst = 0;
+
                 TableOfValuesDatagrid.RowCount = Convert.ToInt32(TimeForReaction.Value * 10); ;
                 TableOfValuesDatagrid.ColumnCount = 2;
                 for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
                 {
-                    SkipFirst++;
                     yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKOne.Value));
-                    if (SkipFirst > 1)
-                    {
-                        yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));
-                    }
+                    yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));          
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yB, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
-
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -119,24 +111,18 @@ namespace SummerPractice
                 double yA, yB = 0;
                 TableOfValuesDatagrid.RowHeadersVisible = false;
                 int CurrentRow = 0;
-                int SkipFirst = 0;
                 TableOfValuesDatagrid.RowCount = Convert.ToInt32(TimeForReaction.Value * 10); ;
                 TableOfValuesDatagrid.ColumnCount = 2;
                 for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(TimeForReaction.Value) / 20)
                 {
-                    SkipFirst++;
                     yA = Convert.ToDouble(ConcentrationOfA.Value) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKOne.Value));
-                    if (SkipFirst > 1)
-                    {
-                        yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));
-                    }
+                    yB = (Convert.ToDouble(ConcentrationOfA.Value) - yA) * Math.Pow(Math.E, i * (-1) * Convert.ToDouble(ReactSpeedKTwo.Value));
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(Convert.ToDouble(ConcentrationOfA.Value)-yB-yA, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
-
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -240,16 +226,16 @@ namespace SummerPractice
                 double yA;
                 TableOfValuesDatagrid.RowHeadersVisible = false;
                 int CurrentRow = 0;
-                int SkipFirst = 0;
+                bool SkipFirst = true;
                 TableOfValuesDatagrid.RowCount = Convert.ToInt32(Convert.ToDouble(TimeForReaction.Value) / Convert.ToDouble(StepOfEiler.Value));
                 TableOfValuesDatagrid.ColumnCount = 2;
                 for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(StepOfEiler.Value))
                 {
-                    if (SkipFirst == 0)
+                    if (SkipFirst)
                     {
                         yA = Convert.ToDouble(ConcentrationOfA.Value);
                         tmpA = yA;
-                        SkipFirst++;
+                        SkipFirst = false;
                     }
                     else
                     {
@@ -260,10 +246,10 @@ namespace SummerPractice
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yA, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
 
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -279,12 +265,12 @@ namespace SummerPractice
                 double yB, yA;
                 TableOfValuesDatagrid.RowHeadersVisible = false;
                 int CurrentRow = 0;
-                int SkipFirst = 0;
+                bool SkipFirst = true;
                 TableOfValuesDatagrid.RowCount = Convert.ToInt32(Convert.ToDouble(TimeForReaction.Value) / Convert.ToDouble(StepOfEiler.Value));
                 TableOfValuesDatagrid.ColumnCount = 2;
                 for (double i = 0; i <= Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(StepOfEiler.Value))
                 {
-                    if (SkipFirst == 0)
+                    if (SkipFirst)
                     {
                         yA = Convert.ToDouble(ConcentrationOfA.Value);
                         tmpA = yA;
@@ -295,25 +281,24 @@ namespace SummerPractice
                         tmpA = yA;
                     }
 
-                    if (SkipFirst == 0)
+                    if (SkipFirst)
                     {
                         yB = 0;
                         tmpB = yB;
-                        SkipFirst++;
+                        SkipFirst = false;
                     }
                     else
                     {
-                        yB = tmpB + Convert.ToDouble(StepOfEiler.Value) * (Convert.ToDouble(ReactSpeedKOne.Value) * yA - tmpB * Convert.ToDouble(ReactSpeedKTwo.Value));
+                        yB = tmpB + Convert.ToDouble(StepOfEiler.Value) * (Convert.ToDouble(ReactSpeedKOne.Value) * tmpA - tmpB * Convert.ToDouble(ReactSpeedKTwo.Value));
                         tmpB = yB;
                     }
 
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(yB, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
-
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -353,17 +338,16 @@ namespace SummerPractice
                     }
                     else
                     {
-                        yB = tmpB + Convert.ToDouble(StepOfEiler.Value) * (Convert.ToDouble(ReactSpeedKOne.Value) * yA - tmpB * Convert.ToDouble(ReactSpeedKTwo.Value));
+                        yB = tmpB + Convert.ToDouble(StepOfEiler.Value) * (Convert.ToDouble(ReactSpeedKOne.Value) * tmpA - tmpB * Convert.ToDouble(ReactSpeedKTwo.Value));
                         tmpB = yB;
                     }
 
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[0].Value = Math.Round(i, 2);
                     TableOfValuesDatagrid.Rows[CurrentRow].Cells[1].Value = Math.Round(Convert.ToDouble(ConcentrationOfA.Value)-yA-yB, 2);
                     CurrentRow++;
-                    TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
-                    TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
-
                 }
+                TableOfValuesDatagrid.Columns[0].HeaderText = "Value of x";
+                TableOfValuesDatagrid.Columns[1].HeaderText = "Value of f(x)";
             }
             catch (Exception)
             {
@@ -381,15 +365,15 @@ namespace SummerPractice
             GraphOfValues.Series[3].Points.Clear();
             GraphOfValues.Series[4].Points.Clear();
             GraphOfValues.Series[5].Points.Clear();
-            double yA, yB = 0;
-            int SkipFirst = 0;
+            double yA, yB;
+            bool SkipFirst = true;
             GraphOfValues.Series[1].Points.AddXY(0, 0);
             for (double i = 0; i < Convert.ToDouble(TimeForReaction.Value); i += Convert.ToDouble(StepOfEiler.Value))
             {
                 
-                if (SkipFirst == 0)
+                if (SkipFirst)
                 {
-                    yA = 100;
+                    yA = Convert.ToDouble(ConcentrationOfA.Value);
                     tmpA = yA;
                     Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                     GraphOfValues.Series[0].Points.AddXY(i, yA);
@@ -400,28 +384,28 @@ namespace SummerPractice
                     yA = tmpA - Convert.ToDouble(StepOfEiler.Value) * Convert.ToDouble(ReactSpeedKOne.Value) * tmpA;
                     tmpA = yA;
                     GraphOfValues.Series[0].Points.AddXY(i, yA);
-                    Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
+                    //Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                     GraphOfValues.Series[3].Points.AddXY(i, yA + Innacurate);
                 }
                 
-                if (SkipFirst == 0)
+                if (SkipFirst)
                 {
                     yB = 0;
                     tmpB = yB;
                     GraphOfValues.Series[1].Points.AddXY(i, yB);
-                    Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
+                    //Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                     GraphOfValues.Series[4].Points.AddXY(i, yB + Innacurate);
                 }
                 else
                 {
                     yB = tmpB + Convert.ToDouble(StepOfEiler.Value) * (Convert.ToDouble(ReactSpeedKOne.Value) * yA - tmpB * Convert.ToDouble(ReactSpeedKTwo.Value));
                     tmpB = yB;
-                    Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
+                    //Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                     GraphOfValues.Series[1].Points.AddXY(i, yB);
                     GraphOfValues.Series[4].Points.AddXY(i, yB + Innacurate);
                 }
-                SkipFirst++;
-                Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
+                SkipFirst = false; ;
+                //Innacurate = (yA / 100) * Rand.Next(Convert.ToInt32(MaximalInaccuracy.Value) - Convert.ToInt32(MinimalInaccuracy.Value), Convert.ToInt32(MaximalInaccuracy.Value));
                 GraphOfValues.Series[2].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB);
                 GraphOfValues.Series[5].Points.AddXY(i, Convert.ToDouble(ConcentrationOfA.Value) - yA - yB + Innacurate);
             }

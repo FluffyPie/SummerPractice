@@ -56,6 +56,8 @@
             this.ConcentrationAButton = new System.Windows.Forms.RadioButton();
             this.TablesGroupbox = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.StepOfEiler = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.TimeForReaction = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -85,13 +87,12 @@
             this.AnalyticButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.GraphInFullscreenButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.EilerButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.StepOfEiler = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
             this.MainFormMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValuesDatagrid)).BeginInit();
             this.ValueGroupBox.SuspendLayout();
             this.TablesGroupbox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StepOfEiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeForReaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RequieredInnac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaximalInaccuracy)).BeginInit();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GraphOfValues)).BeginInit();
             this.GraphGroupbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StepOfEiler)).BeginInit();
             this.SuspendLayout();
             // 
             // MainFormEllipse
@@ -324,6 +324,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your data";
             // 
+            // StepOfEiler
+            // 
+            this.StepOfEiler.DecimalPlaces = 2;
+            this.StepOfEiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StepOfEiler.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.StepOfEiler.Location = new System.Drawing.Point(73, 289);
+            this.StepOfEiler.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.StepOfEiler.Name = "StepOfEiler";
+            this.StepOfEiler.Size = new System.Drawing.Size(57, 20);
+            this.StepOfEiler.TabIndex = 26;
+            this.StepOfEiler.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(79, 266);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 20);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "Step";
+            // 
             // TimeForReaction
             // 
             this.TimeForReaction.DecimalPlaces = 1;
@@ -426,7 +459,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 178);
+            this.label13.Location = new System.Drawing.Point(6, 178);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 20);
             this.label13.TabIndex = 17;
@@ -710,11 +743,11 @@
             this.GraphInFullscreenButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(70)))));
             this.GraphInFullscreenButton.BorderColor = System.Drawing.Color.Black;
             this.GraphInFullscreenButton.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.GraphInFullscreenButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.GraphInFullscreenButton.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(70)))));
             this.GraphInFullscreenButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.GraphInFullscreenButton.CheckedForeColor = System.Drawing.Color.White;
             this.GraphInFullscreenButton.CheckedImage = null;
-            this.GraphInFullscreenButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.GraphInFullscreenButton.CheckedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(70)))));
             this.GraphInFullscreenButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.GraphInFullscreenButton.FocusedColor = System.Drawing.Color.Empty;
             this.GraphInFullscreenButton.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -768,39 +801,6 @@
             this.EilerButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EilerButton.Click += new System.EventHandler(this.EilerButton_Click);
             // 
-            // StepOfEiler
-            // 
-            this.StepOfEiler.DecimalPlaces = 2;
-            this.StepOfEiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StepOfEiler.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.StepOfEiler.Location = new System.Drawing.Point(73, 289);
-            this.StepOfEiler.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.StepOfEiler.Name = "StepOfEiler";
-            this.StepOfEiler.Size = new System.Drawing.Size(57, 20);
-            this.StepOfEiler.TabIndex = 26;
-            this.StepOfEiler.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(79, 266);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 20);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Step";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -831,6 +831,7 @@
             this.TablesGroupbox.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StepOfEiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeForReaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RequieredInnac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaximalInaccuracy)).EndInit();
@@ -840,7 +841,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReactSpeedKOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GraphOfValues)).EndInit();
             this.GraphGroupbox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.StepOfEiler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
